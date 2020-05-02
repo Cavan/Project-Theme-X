@@ -1,19 +1,41 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 // Styles Contents
 // 1. Front / home page
+//  * header.php
 // 2. Single posts styles
 // 3. Search styles
 // 4. 404 styles
 // 5. Navigation styles
 // 6. Comment Styles
 // 7. Typeography Styles
+// 8. Footer Styles
 
 // 1. Front / Home Page Styles
 .most-recent-post{
     padding-bottom: 5%;
 }
 
+.pagination{
+    margin-top:45%;
+}
 
+
+// 5. Navigation Styles
+.nav-link{
+    font-size:1.1em;
+    font-weight: bolder;
+    text-align: center;
+    border-spacing: 2em;
+    border: solid 3px;
+    background-color: $secondary;
+    padding-left: 5%;
+    padding-right:5%;
+}
+
+ .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: $link_hover;
+    //color: $primary;
+}
 // 7. Typeography Styles
 
 a {
@@ -25,3 +47,7 @@ a:hover {
 }
 
 
+// 8. Footer Styles
+#wrapper-footer {
+    background-color: $footer-background;
+}

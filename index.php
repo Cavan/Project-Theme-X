@@ -51,15 +51,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                             <div class="entry-meta">
                                <p><?php echo get_the_date('M dS Y', $post['ID']) ?></p>
-                               <p><?php echo the_author(); ?></p>
+                               <p><?php  echo "Name of author"; ?></p>
                             </div><!-- .entry-meta -->
 
                             <?php endif; ?>
                         <?php echo get_the_post_thumbnail($post['ID'], 'full') ?>
                         </header>
                         <div class="entry-content">
-
-                        
+							<p><?php echo "Excerpt goes here." ?></p>
                         </div><!-- .entry-content -->
                     
 
@@ -121,7 +120,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php understrap_pagination(); ?>
 
 			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+			<?php // get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 		</div><!-- .row -->
 
