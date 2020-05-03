@@ -31,3 +31,18 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 } // End of if function_exists( 'understrap_scripts' ).
 
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
+
+
+
+
+//Add Custom Google Fonts
+
+//https://fonts.googleapis.com/css?family=Crete+Round|Fredoka+One|Noto+Sans+SC:400,500,700,900|Patua+One|Permanent+Marker&display=swap
+
+
+function theme_add_google_fonts() {
+ 
+	wp_enqueue_style( 'theme-google-fonts', 'https://fonts.googleapis.com/css?family=Crete+Round|Fredoka+One|Noto+Sans+SC:400,500,700,900|Patua+One|Permanent+Marker&display=swap', false ); 
+	}
+	 
+	add_action( 'wp_enqueue_scripts', 'theme_add_google_fonts' );

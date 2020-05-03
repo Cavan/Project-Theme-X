@@ -84,5 +84,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
-
+		<div class="container search-bar">
+		<div class="row">
+			<div class="col-12">
+			<?php get_search_form(); ?>
+			</div>	
+		</div>	
+		</div>
 	</div><!-- #wrapper-navbar end -->

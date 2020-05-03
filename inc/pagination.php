@@ -65,7 +65,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 
 		?>
 
-		<nav aria-labelledby="posts-nav-label">
+		<nav aria-labelledby="posts-nav-label" class="paginate-bottom-link-styles">
 
 			<h2 id="posts-nav-label" class="sr-only">
 				<?php echo esc_html( $args['screen_reader_text'] ); ?>

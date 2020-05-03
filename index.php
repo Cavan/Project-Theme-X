@@ -34,35 +34,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
-			<?php
-                    //Get the most recent post
-                    $recent_posts = wp_get_recent_posts(array(
-                        'numberposts' => 1, //Get the most recent post
-                        'post_status' => 'publish' //Return only published posts
-
-                    ));
-                    foreach ($recent_posts as $post) : ?>
-                       
-                       <header class="entry-header most-recent-post"> 
-                        <h2 class="entry-title">
-                        <a href="<?php echo get_permalink($post['ID']) ?>"><?php echo $post['post_title'] ?></a>
-                        </h2>
-                        <?php if ( 'post' === get_post_type() ) : ?>
-
-                            <div class="entry-meta">
-                               <p><?php echo get_the_date('M dS Y', $post['ID']) ?></p>
-                               <p><?php  echo "Name of author"; ?></p>
-                            </div><!-- .entry-meta -->
-
-                            <?php endif; ?>
-                        <?php echo get_the_post_thumbnail($post['ID'], 'full') ?>
-                        </header>
-                        <div class="entry-content">
-							<p><?php echo "Excerpt goes here." ?></p>
-                        </div><!-- .entry-content -->
-                    
-
-                <?php endforeach; wp_reset_query(); ?>
+				<div class="row">
+						<?php
+						$recent_posts = wp_get_recent_posts(array(
+							'numberposts' => 1, // Number of recent posts thumbnails to display
+							'post_status' => 'publish' // Show only the published posts
+						));
+						foreach($recent_posts as $post) : ?>
+								<a href="<?php echo get_permalink($post['ID']) ?>">
+								<h1 class="heading-post-top"><?php echo $post['post_title'] ?></h1>	
+								<?php echo get_the_post_thumbnail($post['ID'], 'full'); ?>
+									<p class="slider-caption-class"></p>
+								</a>
+								<p class="excerpt-post-top"><?php echo get_the_excerpt($post['ID']); ?></p>
+						<?php endforeach; wp_reset_query(); ?>
+					
+				</div>
 
 				<?php
                 $counter = 1; //Start counter
@@ -84,9 +71,9 @@ $container = get_theme_mod( 'understrap_container_type' );
                         title="<?php the_title_attribute(); ?>"><?php
                         the_post_thumbnail('category-thumbnail'); ?></a>
                         <p><?php the_author(); ?></p>
-                        <h2><a href="<?php the_permalink(); ?>"
+                        <h2 class="most-recent-group-heading"><a href="<?php the_permalink(); ?>"
                         title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                        <p><?php the_excerpt(); ?></p>
+                        <div class="most-recent-group-excerpt"><?php the_excerpt(); ?></div>
                     </div>
                     <?php
                     //Show the right hand side column
@@ -97,9 +84,9 @@ $container = get_theme_mod( 'understrap_container_type' );
                         title="<?php the_title_attribute(); ?>"><?php
                         the_post_thumbnail('category-thumbnail'); ?></a>
                         <p><?php the_author(); ?></p>
-                        <h2><a href="<?php the_permalink(); ?>"
+                        <h2 class="most-recent-group-heading"><a href="<?php the_permalink(); ?>"
                         title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                        <p><?php the_excerpt(); ?></p>
+                        <div class="most-recent-group-excerpt"><?php the_excerpt(); ?></div>
                     </div>
                     </div>
                     <?php

@@ -2,6 +2,9 @@
 // Styles Contents
 // 1. Front / home page
 //  * header.php
+//  * searchbar
+//  * Top most recent post - headings and excerpt
+//  * 6 most recent posts - headings and excerpt 
 // 2. Single posts styles
 // 3. Search styles
 // 4. 404 styles
@@ -19,14 +22,57 @@
     margin-top:45%;
 }
 
+.search-bar{
+    padding-top:5%;
+}
+
+// Headings Excerpts Top Post
+.heading-post-top{
+    
+    font-family: $creteRound;
+    font-size: 4em;
+    font-weight:bolder;
+}
+
+.excerpt-post-top{
+    font-family:$patuaOne;
+    font-size:2.5em;
+}
+
+
+// 6 Most recent posts headings and excerpts
+.most-recent-group-heading{
+    font-family: $creteRound;
+    font-size: 2.2em;
+    font-weight:bolder;
+}
+
+.most-recent-group-excerpt{
+    font-family:$patuaOne;
+    font-size:1.2em;
+}
+
+// 2. Single posts styles
+
+.single-header-post{
+    font-family: $creteRound;
+    font-size: 2.8em;
+    
+}
+
+.single-content-post{
+    font-family:$notoSans;
+    font-size:1.5em;
+}
 
 // 5. Navigation Styles
 .nav-link{
+    font-family:$patuaOne;
     font-size:1.1em;
-    font-weight: bolder;
     text-align: center;
     border-spacing: 2em;
     border: solid 3px;
+    border-radius: 10%;
     background-color: $secondary;
     padding-left: 5%;
     padding-right:5%;
@@ -36,6 +82,19 @@
     background-color: $link_hover;
     //color: $primary;
 }
+
+.navbar-collapse{
+    margin-top:-18%;
+    padding-top:1px;
+}
+
+// 6. Comment Styles
+
+.comment-content{
+    font-family:$creteRound;
+    font-size:1.2em;
+}
+
 // 7. Typeography Styles
 
 a {
@@ -46,6 +105,12 @@ a:hover {
     color:$link_hover;
 }
 
+//Pagination link styles
+.paginate-bottom-link-styles{
+    font-family: $creteRound;
+    font-size: 1.5em;
+    font-weight:bolder;
+}
 
 // 8. Footer Styles
 #wrapper-footer {
